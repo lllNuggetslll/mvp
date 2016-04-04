@@ -1,25 +1,36 @@
 angular.module('app', [
-  'ngRoute'
-])
+    'ngRoute'
+  ])
+  .config(function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'Todo.html',
+        controller: 'main'
+      })
+      .when('/inventory', {
+        templateUrl: 'Inventory.html',
+        controller: 'main'
+      })
+      .when('/store', {
+        templateUrl: 'Store.html',
+        controller: 'main'
+      })
+      .when('/donutfactory', {
+        templateUrl: 'DonutFactory.html',
+        controller: 'main'
+      })
+      .otherwise({ redirectTo: '/' })
 
-.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'ToDo.html',
-      controller:
-    })
-    .when('/Inventory', {
-      templateUrl: 'Inventory.html',
-      controller:
-    })
-    .when('/Store', {
-      templateUrl: 'Store.html',
-      controller:
-    })
-    .when('/DonutFactory', {
-      templateUrl: 'DonutFactory.html'
-    })
-    .otherwise({ redirectTo: '/' })
+
+
+  })
+
+.controller('main', function($scope, $location) {
+
+    $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
+
 
 
 
