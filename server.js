@@ -10,6 +10,6 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.listen(port, function(){
-  console.log("listening to 8000");
+  console.log("Welcome back master.....");
 
 });
