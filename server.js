@@ -10,6 +10,6 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.listen(port, function(){
-  console.log("Welcome back master.....");
+  console.log("Welcome back, master.....");
 
 });
