@@ -5,61 +5,83 @@ angular.module('app', [
     $routeProvider
       .when('/', {
         templateUrl: 'Todo.html',
-        controller: 'main'
+        controller: 'todo'
       })
       .when('/inventory', {
         templateUrl: 'Inventory.html',
-        controller: 'main'
+        controller: 'box'
       })
       .when('/store', {
         templateUrl: 'Store.html',
-        controller: 'main'
+        controller: 'buy'
       })
       .when('/donutfactory', {
         templateUrl: 'DonutFactory.html',
-        controller: 'main'
+        controller: 'work'
       })
       .otherwise({ redirectTo: '/' })
   })
-  .controller('main', function($scope, $location, Mather) {
 
-    //angular.extend($scope, Mather);
-    $scope.money = 0;
+  .controller('todo', function($scope, Mather){
+      $scope.clean = function(){
+        Mather.brooms--;
+        console.log("all clean")
+      }
+  })
 
+  .controller('box', function($scope, Mather) {
+    $scope.broom = Mather.brooms;
 
-    
-
-    $scope.isActive = function(viewLocation) {
-      return viewLocation === $location.path();
-    };
+  })
+  .controller('work', function($scope, Mather) {
+    $scope.monies = Mather.wallet;
+    $scope.donuts = Mather.donuts;
 
     $scope.add = function() {
-      Mather.make();
-      $scope.money = Mather.wallet;
-      console.log("mather make  "+ JSON.stringify(Mather))
+      Mather.donuts++;
+      console.log('donuts ' + Mather.donuts)
+      if (Number.isInteger(Mather.donuts / 10)) {
+        Mather.wallet++;
+      }
+
+      $scope.monies = Mather.wallet;
+      $scope.donuts = Mather.donuts;
+
+      console.log("mather make  " + JSON.stringify(Mather))
     };
 
   })
+  .controller('buy', function($scope, Mather) {
+    console.log('store ' + JSON.stringify(Mather))
+
+    $scope.pocket = Mather.wallet;
+    $scope.broom = Mather.brooms;
+
+
+    $scope.pay = function() {
+      if (Mather.wallet > 0) {
+        Mather.brooms++;
+        Mather.wallet--;
+      }
+      $scope.pocket = Mather.wallet;
+      $scope.broom = Mather.brooms;
+    }
+
+  })
+  
   .factory('Mather', function() {
     var donuts = 0;
     var wallet = 0;
     var brooms = 0;
 
-    var make = function() {
-      donuts++;
-      console.log("donuts " + donuts)
-      var ten = donuts / 10;
-      if (Number.isInteger(ten)) {
-        wallet++;
-        console.log("wallet: " + wallet)
-       // return wallet;
-      }
-    };
-
     return {
-      donuts: donuts,
-      wallet: wallet,
       brooms: brooms,
-      make: make
-    }
+      donuts: donuts,
+      wallet: wallet
+    };
   })
+  .controller('navCtrl', function($scope, $location) {
+    $scope.isActive = function(viewLocation) {
+      return viewLocation === $location.path();
+    };
+  });

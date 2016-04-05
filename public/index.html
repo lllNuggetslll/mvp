@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 <head>
   <meta charset="utf-8">
   <title> Todo Quest </title>
 </head>
 
-<body ng-app="app" ng-controller="main">
+<body  ng-controller="navCtrl">
   <nav >
     <ul class="nav navbar-nav">
       <li ng-class="{ active: isActive('/todo')}"><a href="#/todo">ToDo</a></li>
@@ -16,7 +16,7 @@
     </ul>
   </nav>
   <h1> Todo Quest </h1>
-  <h2 ng-model="money">Wallet: {{ money }}</h2>
+  
 
 
 
@@ -25,6 +25,7 @@
   <ul>
     <li><strike>Take shit from Sara</strike></li>
   </ul>
+  
   <div ng-view></div>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
