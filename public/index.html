@@ -6,16 +6,22 @@
   <title> Todo Quest </title>
 </head>
 
-<body ng-app="app">
-  <nav ng-controller="main">
+<body ng-app="app" ng-controller="main">
+  <nav >
     <ul class="nav navbar-nav">
-      <li ng-class="{ active: isActive('/')}"><a href="#/todo">ToDo</a></li>
+      <li ng-class="{ active: isActive('/todo')}"><a href="#/todo">ToDo</a></li>
       <li ng-class="{ active: isActive('/inventory')}"><a href="#/inventory">Inventory</a></li>
       <li ng-class="{ active: isActive('/store')}"><a href="#/store">Store</a></li>
       <li ng-class="{ active: isActive('/donutfactory')}"><a href="#/donutfactory">Donut Factory</a></li>
     </ul>
   </nav>
   <h1> Todo Quest </h1>
+  <h2 ng-model="money">Wallet: {{ money }}</h2>
+
+
+
+
+
   <ul>
     <li><strike>Take shit from Sara</strike></li>
   </ul>
