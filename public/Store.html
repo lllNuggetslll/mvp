@@ -1,4 +1,10 @@
+<style>
+html {
+  background: url(http://g.foolcdn.com/editorial/images/106205/dollartree.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+</style>
 <h1>This is the Store</h1>
 <h2 ng-model="money">Wallet: {{ pocket | currency }}</h2>
 <h2 ng-model="broom">Brooms: {{ broom }}</h2>
-<button ng-click = 'pay()'>Buy Broom</button>
+<button class = "btn" ng-click = 'pay()'>Buy Broom</button>
