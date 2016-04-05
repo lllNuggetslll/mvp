@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  You're on a quest, with things to do.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+ 
   This product is for those that want to take care of life's neccessities, but have no will to.  
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  
   This product allows users to receive the feeling of accomplishing a task without putting any real meaningful effort into it. 
 ## Problem ##
-  > Describe the problem your product solves.
+ 
   There are many people out there that are unmotivated and are non-self starters.  They want to feel like they've done something.
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  
   From the comfort of their seating arrangement, users can accomplish tasks in the digital world that simulates real world tasks.
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  
   'why do it, when you can just feel like you did it?'
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  
   All that is required is to have a brain, be able to read, and ready click.
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  
   'I've always avoided doing mundane choires in life, but now, with Todo Quest, I can do them without even leaving my chair!'
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  go forth, and do all the cleaning
