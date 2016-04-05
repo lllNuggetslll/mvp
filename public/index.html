@@ -8,8 +8,8 @@
   <title> Todo Quest </title>
 </head>
 
-<body  ng-controller="navCtrl">
-  <nav >
+<body ng-controller="navCtrl">
+  <nav>
     <ul class="nav navbar-nav">
       <li ng-class="{ active: isActive('/todo')}"><a href="#/todo">ToDo</a></li>
       <li ng-class="{ active: isActive('/inventory')}"><a href="#/inventory">Inventory</a></li>
@@ -17,16 +17,7 @@
       <li ng-class="{ active: isActive('/donutfactory')}"><a href="#/donutfactory">Donut Factory</a></li>
     </ul>
   </nav>
-
-  <h1 class = "jumbotron"> Todo Quest </h1>
-  
-
-
-
-
-
-  
-
+  <h1 class="jumbotron"> Todo Quest </h1>
   <div ng-view></div>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>

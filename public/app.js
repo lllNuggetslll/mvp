@@ -4,7 +4,7 @@ angular.module('app', [
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'Todo.html',
+        templateUrl: 'ToDo.html',
         controller: 'todo'
       })
       .when('/inventory', {
