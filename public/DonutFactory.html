@@ -3,8 +3,16 @@ html {
   background: url(http://vignette4.wikia.nocookie.net/animaljam/images/0/01/Donut_nyan_cat.gif/revision/latest?cb=20140627082704) no-repeat center center fixed;
   background-size: cover;
 }
+div {
+color: white;
+
+}
 </style>
-<h1>Time to make the donuts!</h1>
-<h2>Wallet: {{ monies | currency }}</h2>
-<h2>Donuts: {{ donuts }}</h2>
-<button class = "btn" ng-click='add()'>Make the donuts! Make em' good!</button>
+
+
+<div class = "col-md-4">
+  <h1>Time to make the donuts!</h1>
+  <h2>Wallet: {{ monies | currency }}</h2>
+  <h2>Donuts: {{ donuts }}</h2>
+  <button class="btn" ng-click='add()'>Make the donuts! Make em' good!</button>
+</div>

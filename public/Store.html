@@ -3,8 +3,13 @@ html {
   background: url(http://g.foolcdn.com/editorial/images/106205/dollartree.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+div {
+  color: white;
+}
 </style>
+<div class = "col-md-4">
 <h1>This is the Store</h1>
 <h2 ng-model="money">Wallet: {{ pocket | currency }}</h2>
 <h2 ng-model="broom">Brooms: {{ broom }}</h2>
 <button class = "btn" ng-click = 'pay()'>Buy Broom</button>
+</div>
